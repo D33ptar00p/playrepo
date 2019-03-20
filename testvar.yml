@@ -1,8 +1,8 @@
 - hosts: myservers
   become: yes
   vars:
-   var1: {{ var1 }}
-   var2: {{ var2 }}
+   var1: "{{ var1 }}"
+   var2: "{{ var2 }}"
   tasks:
   - name: Adding user {{ var1 }}
     user:
