@@ -8,7 +8,7 @@
     user:
      name: "{{ var1 }}"
      shell: /bin/false
-  - name: adding a file in tmp
+  - name: adding file {{ var2 }} in tmp
     file:
      name: "{{ var2 }}"
      state: touch
