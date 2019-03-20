@@ -1,0 +1,15 @@
+- hosts: myservers
+  become: yes
+  vars:
+   var1: {{ var1 }}
+   var2: {{ var2 }}
+  tasks:
+  - name: Adding user {{ var1 }}
+    user:
+     name: "{{ var1 }}"
+     shell: /bin/false
+  - name: adding a file in tmp
+    file:
+     name: "{{ var2 }}"
+     state: touch
+ 
